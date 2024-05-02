@@ -1,19 +1,27 @@
 import { useEffect, useState } from "react";
 
-const useWindowSize = () => {
-    let [windowSize, setWindowSize] = useState({
-        width: undefined,
+export const useWindowSize = () => {
+    const [windowSize, setWindowSize] = useState({
+        width: window.innerWidth, // Initial width
     });
+
     useEffect(() => {
-        let handleResize = () => {
+        const handleResize = () => {
             setWindowSize({ width: window.innerWidth });
         };
+
+        // Initial resize
         handleResize();
+
+        // Add event listener
         window.addEventListener("resize", handleResize);
 
-        return () => window.addEventListener("resize", handleResize);
-    }, []);
+        // Remove event listener on cleanup
+        return () => {
+            window.removeEventListener("resize", handleResize);
+        };
+    }, []); // Empty dependency array means this effect only runs once
+
     return windowSize;
 };
 
-export default useWindowSize;

@@ -1,33 +1,35 @@
 
 import React, { useContext } from 'react';
-import Header from '../components/header/Header';
+
 import './App.css';
 import { Route, Routes } from "react-router-dom";
-import Application from '../pages/Applications/Application';
-import Capstone from '../pages/Capstones/Capstone';
-import Certificate from '../pages/Certificates/Certificate';
-import Dashboard from '../pages/Dashboards/Dashboard';
-import Interview from '../pages/Interviews/Interview';
-import Leaderboard from '../pages/Leaderboards/Leaderboard';
-import Leave from '../pages/Leaves/Leave';
-import Mock from '../pages/Mocks/Mock';
-import Portfolio from '../pages/Portfolios/Portfolio';
-import Queries from '../pages/Queries/Queries';
-import Requirements from '../pages/Requirements/Requirements';
-import Syllabus from '../pages/Syllabus/Syllabus';
-import Tasks from '../pages/Tasks/Tasks';
-import Webcode from '../pages/Webcodes/Webcode';
-import Navbar from '../components/navbars/Navbar';
-import Roadmap from '../pages/Roadmaps/Roadmap';
-import Profile from '../pages/Profiles/Profile';
-import Login from '../pages/Logins/Login';
-import DataContext from '../contexts/DataContext';
-import LoggedOut from '../Pages/LoggedOuts/LoggedOut';
-import Signup from '../pages/Signup/Signup';
-import Forgot from '../pages/Forgots/Forgot';
-import Reset from '../pages/Resets/Reset';
-import ConfirmUser from '../pages/confirmUsers/ConfirmUser';
-import Mentor from '../pages/Mentors/Mentor';
+
+
+import Certificate from './pages/Certificates/Certificate';
+import Dashboard from './pages/Dashboards/Dashboard';
+import Interview from './pages/Interviews/Interview';
+import Leaderboard from './pages/Leaderboards/Leaderboard';
+import Leave from './pages/Leaves/Leave';
+import Mock from './pages/Mocks/Mock';
+import Portfolio from './pages/Portfolios/Portfolio';
+import Queries from './pages/Queries/Queries';
+import Requirements from './pages/Requirements/Requirements';
+import Syllabus from './pages/Syllabus/Syllabus';
+import Tasks from './pages/Tasks/Tasks';
+import Webcode from './pages/Webcodes/Webcode';
+import Navbar from './components/navbars/Navbar';
+import Roadmap from './pages/Roadmaps/Roadmap';
+import Profile from './pages/Profiles/Profile';
+import Login from './pages/Logins/Login';
+import DataContext from './contexts/DataContext';
+import LoggedOut from './Pages/LoggedOuts/LoggedOut';
+import Signup from './pages/Signup/Signup';
+import Forgot from './pages/Forgots/Forgot';
+import Reset from './pages/Resets/Reset';
+import ConfirmUser from './pages/confirmUsers/ConfirmUser';
+import Mentor from './pages/Mentors/Mentor';
+import Header from './Components/header/header';
+import Application from './Pages/Applications/Application';
 
 
 
@@ -68,7 +70,7 @@ function App() {
             <Route path='/queries' element={<Queries />} />
             <Route path='/requirements' element={<Requirements />} />
             <Route path='/portfolio' element={<Portfolio />} />
-            <Route path='/application' element={<Application />} />
+            <Route path='/application' element={<Application/>} />
             <Route path='/interviewtasks' element={<Interview />} />
             <Route path='/leave' element={<Leave />} />
             <Route path='/mock' element={<Mock />} />

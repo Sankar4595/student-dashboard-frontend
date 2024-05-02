@@ -3,14 +3,15 @@ import { createContext, useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import api from "../api/api";
 import { toast } from "react-toastify";
-import useWindowSize from "./hooks/useWindowSize";
+
 import { roadMapData } from "../data";
+// import { useWindowSize } from "../hooks/UseWindowSize";
 
 const DataContext = createContext({});
 
 export const DataProvider = ({ children }) => {
     // variables and functions
-    const { width } = useWindowSize();
+    // const { width } = useWindowSize();
     const [head, setHead] = useState("");
     const [loggedUser, setLoggedUser] = useState("");
     const [token, setToken] = useState("");
@@ -92,6 +93,8 @@ export const DataProvider = ({ children }) => {
             setIsLoading(false);
         }
     };
+
+    let width = 100;
 
     // handle signout
     const handleLogout = () => {
